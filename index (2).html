@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nova AI Web – assistente vocale gratis in italiano per PC</title>
+<meta name="description" content="Scarica Nova, l’assistente vocale in italiano che gira sul tuo PC: gratis, senza account, senza cloud. Parlale e ti risponde a voce.">
+<link rel="canonical" href="https://TUODOMINIO.it/">
+<meta property="og:title" content="Nova AI Web – l’assistente vocale gratis che gira sul tuo PC">
+<meta property="og:description" content="Parla, lei ascolta e risponde. Gratis, privata, in italiano.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nova AI Web">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Nova è davvero gratis?","acceptedAnswer":{"@type":"Answer","text":"Sì. Gira sul tuo computer con modelli open source, quindi non ci sono abbonamenti né costi nascosti."}},
+{"@type":"Question","name":"Serve internet per usare Nova?","acceptedAnswer":{"@type":"Answer","text":"Solo per il primo download dei modelli. Dopo funziona offline."}},
+{"@type":"Question","name":"Nova registra le mie conversazioni?","acceptedAnswer":{"@type":"Answer","text":"No. Audio e testo restano sul tuo PC e non vengono inviati a nessun server."}}]}
+</script>
+
+<style>
+:root{
+  --bg:#eef3f7; --ink:#12202b; --muted:#4d5f6e; --surface:#ffffff;
+  --cobalt:#2447ff; --cobalt-d:#1630b8; --amber:#ffb21e; --line:#d3dde6;
+  --radius:14px;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:Figtree,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:1.0625rem}
+h1,h2,h3{font-family:"Bricolage Grotesque",Figtree,sans-serif;line-height:1.1;letter-spacing:-.02em}
+a{color:var(--cobalt)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 1.25rem}
+header{padding:1.1rem 0;border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:"Bricolage Grotesque";font-weight:800;font-size:1.4rem;text-decoration:none;color:var(--ink)}
+nav a{margin-left:1.25rem;text-decoration:none;color:var(--muted);font-weight:600}
+nav a:hover{color:var(--cobalt)}
+
+/* HERO */
+.hero{padding:4rem 0 3.5rem}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
+h1{font-size:clamp(2.4rem,6vw,4.1rem);font-weight:800}
+.hero p.lead{margin:1.2rem 0 1.8rem;font-size:1.2rem;color:var(--muted);max-width:34ch}
+.btn{display:inline-block;padding:.85rem 1.5rem;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--cobalt);background:var(--cobalt);color:#fff;cursor:pointer;font-size:1rem;font-family:inherit}
+.btn:hover{background:var(--cobalt-d);border-color:var(--cobalt-d)}
+.btn.ghost{background:transparent;color:var(--cobalt)}
+.btn.ghost:hover{background:#fff}
+.hero .cta{display:flex;gap:.8rem;flex-wrap:wrap}
+.hero small{display:block;margin-top:.9rem;color:var(--muted)}
+
+/* DEMO */
+.demo{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:1.6rem;text-align:center}
+.orb{width:150px;height:150px;border-radius:50%;margin:.4rem auto 1.1rem;border:0;cursor:pointer;
+  background:radial-gradient(circle at 35% 30%,#8fa4ff,var(--cobalt) 60%,var(--cobalt-d));
+  box-shadow:0 0 0 10px rgba(36,71,255,.10),0 0 0 22px rgba(36,71,255,.05);transition:transform .2s}
+.orb:hover{transform:scale(1.04)}
+.orb.listen{animation:pulse 1.2s ease-in-out infinite;background:radial-gradient(circle at 35% 30%,#ffe29a,var(--amber) 60%,#e08f00)}
+.orb.speak{animation:pulse .7s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(1.1)}}
+.demo .status{min-height:3.4em;font-weight:600}
+.demo .hint{color:var(--muted);font-size:.9rem}
+.demo form{display:flex;gap:.5rem;margin-top:1rem}
+.demo input{flex:1;padding:.7rem 1rem;border:1px solid var(--line);border-radius:999px;font:inherit}
+
+/* SEZIONI */
+section{padding:3.2rem 0}
+h2{font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:1.6rem}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;list-style:none;padding:0;counter-reset:s}
+.steps li{counter-increment:s;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:1.4rem}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:2rem;height:2rem;border-radius:50%;background:var(--ink);color:#fff;font-weight:600;margin-bottom:.8rem}
+.steps h3{font-size:1.25rem;margin-bottom:.4rem}
+.steps p{color:var(--muted)}
+.use{columns:2;column-gap:2rem;max-width:760px}
+.use li{margin:0 0 .7rem 1.1rem;break-inside:avoid}
+details{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:1rem 1.25rem;margin-bottom:.7rem;max-width:760px}
+summary{font-weight:600;cursor:pointer}
+details p{margin-top:.6rem;color:var(--muted)}
+
+/* ADS + DONAZIONI */
+.support{background:var(--ink);color:#fff;border-radius:24px;padding:2.4rem;display:flex;gap:2rem;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.support h2{margin:0 0 .4rem;font-size:1.8rem}
+.support p{color:#b9c7d3;max-width:44ch}
+.btn.amber{background:var(--amber);border-color:var(--amber);color:var(--ink)}
+.btn.amber:hover{background:#ffc552;border-color:#ffc552}
+footer{padding:2.5rem 0;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
+
+
+@media(max-width:800px){
+  .hero .wrap,.steps{grid-template-columns:1fr}
+  .use{columns:1}
+  nav a:not(.keep){display:none}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#">Nova <span style="color:var(--cobalt)">AI Web</span></a>
+    <nav><a href="#come-funziona">Come funziona</a><a href="#faq">Domande</a><a class="keep" href="#scarica">Scarica</a></nav>
+  </div>
+</header>
+
+<main>
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Un assistente vocale che parla italiano e vive nel tuo PC.</h1>
+      <p class="lead">Parlale, ti risponde a voce. Gratis, senza account e senza che le tue conversazioni escano da casa tua.</p>
+      <div class="cta">
+        <a class="btn" href="#scarica">Scarica Nova</a>
+        <a class="btn ghost" href="#come-funziona">Come funziona</a>
+      </div>
+      <small>Windows, Mac e Linux. Open source.</small>
+    </div>
+
+    <div class="demo" aria-live="polite">
+      <button class="orb" id="orb" aria-label="Parla con Nova"></button>
+      <div class="status" id="status">Premi la sfera e prova a parlare.</div>
+      <div class="hint" id="hint">Prova: “che ore sono?”, “come ti chiami?”, “raccontami una barzelletta”.</div>
+      <form id="form"><input id="txt" placeholder="Oppure scrivi qui" aria-label="Scrivi a Nova"><button class="btn" type="submit">Invia</button></form>
+    </div>
+  </div>
+</div>
+
+
+<section id="come-funziona">
+  <div class="wrap">
+    <h2>Come funziona</h2>
+    <ol class="steps">
+      <li><h3>Ti ascolta</h3><p>Riconosce la tua voce in italiano direttamente sul computer, senza mandare l’audio a nessuno.</p></li>
+      <li><h3>Ragiona</h3><p>Un modello di intelligenza artificiale open source capisce cosa chiedi e prepara la risposta.</p></li>
+      <li><h3>Ti risponde</h3><p>Legge la risposta ad alta voce, così non devi toccare tastiera o schermo.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Cosa puoi chiederle</h2>
+    <ul class="use">
+      <li>Che ore sono e che giorno è oggi</li>
+      <li>Spiegarti un argomento in due frasi</li>
+      <li>Aiutarti con compiti, ricette e idee</li>
+      <li>Cercare qualcosa su Google o YouTube</li>
+      <li>Tradurre una frase o correggere un testo</li>
+      <li>Farti compagnia con una barzelletta</li>
+    </ul>
+  </div>
+</section>
+
+<section id="scarica">
+  <div class="wrap">
+    <h2>Scarica Nova</h2>
+    <p style="margin-bottom:1.2rem;max-width:60ch">Servono circa 6 GB di spazio e almeno 8 GB di RAM. Dopo l’installazione funziona anche senza internet.</p>
+    <a class="btn" href="https://github.com/TUOUTENTE/nova/releases">Vai al download su GitHub</a>
+  </div>
+</section>
+
+
+<section id="faq">
+  <div class="wrap">
+    <h2>Domande frequenti</h2>
+    <details><summary>Nova è davvero gratis?</summary><p>Sì. Gira sul tuo computer con modelli open source, quindi non ci sono abbonamenti né costi nascosti.</p></details>
+    <details><summary>Serve internet per usarla?</summary><p>Solo per il primo download dei modelli. Dopo funziona offline.</p></details>
+    <details><summary>Registra le mie conversazioni?</summary><p>No. Audio e testo restano sul tuo PC e non vengono inviati a nessun server.</p></details>
+    <details><summary>La demo qui sopra è la stessa di Nova?</summary><p>No, è una versione semplificata che gira nel browser. Il programma completo è molto più intelligente.</p></details>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="support">
+      <div>
+        <h2>Nova resta gratis grazie a chi la sostiene</h2>
+        <p>Se ti è utile, un caffè aiuta a migliorarla e a tenere il sito online.</p>
+      </div>
+      <a class="btn amber" href="https://ko-fi.com/TUOUTENTE">Offrimi un caffè</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Nova AI Web. Progetto indipendente e open source.</div>
+</footer>
+
+<script>
+// ---- Demo vocale nel browser (Web Speech API, funziona al meglio su Chrome/Edge)
+const orb=document.getElementById('orb'), status=document.getElementById('status'), txt=document.getElementById('txt');
+const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+
+function reply(q){
+  q=q.toLowerCase();
+  const jokes=["Perché il computer è andato dal dottore? Aveva un virus.","Qual è il colmo per un elettricista? Non avere corrente di pensiero."];
+  if(/ore|ora è|che ora/.test(q)) return "Sono le "+new Date().toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit'})+".";
+  if(/giorno|data/.test(q)) return "Oggi è "+new Date().toLocaleDateString('it-IT',{weekday:'long',day:'numeric',month:'long'})+".";
+  if(/nome|chi sei/.test(q)) return "Mi chiamo Nova. Sono un assistente vocale che puoi installare gratis sul tuo computer.";
+  if(/barzelletta|ridere/.test(q)) return jokes[Math.floor(Math.random()*jokes.length)];
+  if(/ciao|buongiorno|salve/.test(q)) return "Ciao! Come posso aiutarti?";
+  return "Nella demo so rispondere solo a poche domande. Scarica Nova per parlarle di qualsiasi cosa.";
+}
+function speak(t){
+  status.textContent=t;
+  if(!('speechSynthesis' in window)) return;
+  const u=new SpeechSynthesisUtterance(t); u.lang='it-IT';
+  u.onstart=()=>orb.className='orb speak'; u.onend=()=>orb.className='orb';
+  speechSynthesis.cancel(); speechSynthesis.speak(u);
+}
+orb.onclick=()=>{
+  if(!SR){ status.textContent="Il tuo browser non supporta il microfono qui: scrivi nel campo sotto."; return; }
+  const r=new SR(); r.lang='it-IT';
+  r.onstart=()=>{orb.className='orb listen';status.textContent='Ti ascolto…'};
+  r.onresult=e=>{const q=e.results[0][0].transcript; status.textContent='“'+q+'”'; setTimeout(()=>speak(reply(q)),500)};
+  r.onerror=()=>{orb.className='orb';status.textContent='Non ho sentito nulla. Controlla il permesso del microfono.'};
+  r.onend=()=>{ if(orb.classList.contains('listen')) orb.className='orb'; };
+  r.start();
+};
+document.getElementById('form').onsubmit=e=>{e.preventDefault(); if(txt.value.trim()){speak(reply(txt.value)); txt.value='';}};
+</script>
+</body>
+</html>
